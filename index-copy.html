@@ -67,7 +67,8 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="cande-mobile.png" class="d-block w-100" alt="...">
+            <img src="cande-mobile.png" class="d-md-none w-100" alt="...">
+            <img src="cande-mobile-big.png" class="d-none d-md-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
               <p>Some representative placeholder content for the first slide.</p>
@@ -97,6 +98,90 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+
+      <h1 id="bay-area-rapid-transit-bart-operations-control-center-occ-shift-log-workbench-">Bay Area Rapid Transit (BART) - Operations Control Center (OCC) - Shift Log Workbench 🚆 👷 ⌨️</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#summary">Summary</a><ol>
+<li><a href="#background">Background</a></li>
+<li><a href="#problem">Problem</a></li>
+<li><a href="#objective">Objective</a></li>
+</ol>
+</li>
+<li><a href="#solutions">Solutions</a></li>
+<li><a href="#uiux-design">UI/UX Design</a></li>
+<li><a href="#shift-log-work-bench-by-bart---initial-release-10">Shift Log Work Bench by BART - Initial Release 1.0 </a></li>
+<li><a href="#technologies">Technologies</a></li>
+</ol>
+<h2 id="summary">Summary</h2>
+<h3 id="background">Background</h3>
+<p>The Bay Area Rapid Transit District (BART) is familiar to many as one of the country’s premier commuter rail 
+systems. But some of the most critical work at BART is done in a place the public almost never sees: the 
+Operations Control Center (OCC). Similar to air traffic control, OCC’s staff monitor trains running in the system 
+and provide necessary information, instructions, and interventions to train operators based on real-time 
+conditions, helping guide them to their destinations safely and efficiently.  Every day, OCC managers complete 
+shift logs detailing maintenance work, police activity, delays, equipment abnormalities, and other events 
+impacting the regular operation of the system. These logs are then compiled into reports presented to BART 
+leadership every morning. Executive staff are often very busy and only have time to skim the 7–8-page report.<br>To address this issue, BART Maintenance &amp; Engineering (M&amp;E) hopes to improve the process of inputting, 
+categorizing, condensing, extracting, and reporting this data so that District leadership is presented with concise 
+information that is comprehensible at a glance. </p>
+<h3 id="problem">Problem</h3>
+<p>This project will entail developing software tools to streamline and optimize OCC reporting from end to end. As 
+it is, the daily process begins with OCC managers inputting log items to be reviewed and annotated by the 
+relevant Engineering/Maintenance departmental experts, before being published in the daily executive reports 
+and saved to a database for future OCC reference.  This project will require a more user-friendly interface and 
+categorization scheme for OCC log inputs. Once items are entered, the new system will need to make the 
+annotation process more intuitive and straightforward, allowing M&amp;E staff to quickly review and provide 
+feedback. Finally, the system will produce a one-page dashboard incorporating graphics, text, and numerical 
+data to elegantly present information that is actionable and easily digested. All steps in this process will be 
+accessible via web browser so that staff can work via tablet, laptop, or desktop workstation. </p>
+<h3 id="objective">Objective</h3>
+<p>This project will be the first step in an iterative effort by the District to improve OCC event reporting. Over time, 
+machine learning and natural language processing will be incorporated in order to further automate and 
+improve the system. As such, this experience will be a chance for interns to create a product that improves the 
+day-to-day functioning of BART, while at the same time developing ideas and feedback to guide future stages of 
+process optimization. </p>
+<h2 id="solutions">Solutions</h2>
+<ul>
+<li>co-created a web application with three other software engineers to replace system for inputting and classifying event logs and producing end-of-day reports for the operation control center.</li>
+<li>Integrated rich text editor into application, adding over a dozen text functions, increasing ability to create custom and detail oriented reports by using Quill.js tool.</li>
+<li>Implemented ability to add frequently used templates to incident logs with keyboard shortcuts reducing input time by utilizing keyboard bindings.</li>
+<li>Integrated the ability to rapidly add search tags to incident log entries by using text auto-complete function improving data storage for optimal categorization and search-ability.</li>
+<li>Created database to store incident logs using SQL Alchemy and created tool to search through database with various criteria and display data in a quick and efficient manner.</li>
+</ul>
+<h2 id="ui-ux-design">UI/UX Design</h2>
+<h3 id="home-screen">Home Screen</h3>
+<p><img src="/github-imgs/bart-7.png?raw=true" alt="BART UI Design 1" title="BART UI Design 1"></p>
+<h3 id="log-view-screen">Log View Screen</h3>
+<p><img src="/github-imgs/bart-6.png?raw=true" alt="BART UI Design 1" title="BART UI Design 1"></p>
+<h3 id="editor-screen">Editor Screen</h3>
+<p><img src="/github-imgs/bart-8.png?raw=true" alt="BART UI Design 1" title="BART UI Design 1"></p>
+<h2 id="shift-log-work-bench-by-bart-initial-release-1-0">Shift Log Work Bench by BART - Initial Release 1.0</h2>
+<h3 id="register-new-user-to-control-center-incident-log-system">Register new user to control center incident log system</h3>
+<p><img src="/github-imgs/bart-login.png?raw=true" alt="BART Login" title="BART OCC Login"></p>
+<h3 id="control-center-incident-logs-current-logs-view">Control center incident logs current logs view</h3>
+<p><img src="/github-imgs/bart-2.png?raw=true" alt="BART Login" title="BART OCC Current Logs"></p>
+<h3 id="add-frequently-used-templates-using-keyboard-bindings">Add frequently used templates using keyboard bindings</h3>
+<p><img src="/github-imgs/bart-3.png?raw=true" alt="BART Login" title="BART Keyboard Bindings"></p>
+<h3 id="rapidly-add-search-tags-using-text-auto-complete">Rapidly add search tags using text auto-complete</h3>
+<p><img src="/github-imgs/bart-4.png?raw=true" alt="BART Login" title="BART Add Search Tags"></p>
+<h3 id="search-for-incident-logs-using-multiple-parameters">Search for incident logs using multiple parameters</h3>
+<p><img src="/github-imgs/bart-5.png?raw=true" alt="BART Login" title="BART Search Logs"></p>
+<h2 id="technologies">Technologies</h2>
+<ul>
+<li>Python</li>
+<li>JavaScript</li>
+<li>Flask</li>
+<li>HTML</li>
+<li>mySQL</li>
+<li>ByCrpt</li>
+<li>Quill.js</li>
+<li>Awesomplete</li>
+<li>Cleave.js</li>
+<li>CSS</li>
+<li>BootStrap</li>
+</ul>
+
 
 
 
